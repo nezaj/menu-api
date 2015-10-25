@@ -6,3 +6,4 @@
 ### Things to fix
 * Fix configuration pattern, doesn't use inheritance
 * Think about re-organizing memory_store tests
+* Look into better organization for manage.py (although it works for now)

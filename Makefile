@@ -22,11 +22,11 @@ virtualenv:
 
 pep8:
 	@echo "Running pep8..."
-	$(VENV_ACTIVATE) && pep8 src
+	$(VENV_ACTIVATE) && pep8 src test *.py
 
 pylint:
 	@echo "Running pylint..."
-	$(VENV_ACTIVATE) && pylint src
+	$(VENV_ACTIVATE) && pylint src test *.py
 
 test:
 	@echo "Running py.test..."

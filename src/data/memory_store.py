@@ -19,8 +19,6 @@ class MemoryStore(object):
         multiple collections of data and that each collection lives in its
         own subdirectory. As a result, we go through each directory and load
         it's data into it's own key.
-
-        For example, the "food" collection is accessed via self.data['food']
         """
         data = {}
         for d in os.listdir(data_dir):
@@ -48,14 +46,12 @@ class MemoryStore(object):
 
     @staticmethod
     def _load_json_file(f):
-        """ Loads a json config file """
         with open(f) as jf:
             jd = json.load(jf)
         return jd
 
     @staticmethod
     def _process_json(jd):
-        """ Returns id and metadata from json dict """
         jd_id = jd["id"]
         return jd_id, jd
 

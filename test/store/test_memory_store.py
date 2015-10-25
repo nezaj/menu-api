@@ -3,11 +3,13 @@ Tests MemoryStore Interface
 """
 from src.data.memory_store import MemoryStore
 
+# Mock needs to match function signature even if we don't use the params
+# pylint: disable=unused-argument
 def mock_load_data(store_instance, data_dir):
     return {
         'food': {
-            'Burger': { 'id': 'Burger', 'Price': 'test'},
-            'Pizza': { 'id': 'Pizza', 'Price': 'test' }
+            'Burger': {'id': 'Burger', 'Price': 'test'},
+            'Pizza': {'id': 'Pizza', 'Price': 'test'}
         }
     }
 
@@ -21,7 +23,7 @@ def test_store_create_item(monkeypatch):
     store = MemoryStore('dir')
     collection = 'food'
     item_id = 'Steak'
-    params = { 'id': item_id, 'Price': '$10.00'}
+    params = {'id': item_id, 'Price': '$10.00'}
 
     # Item is not in the collection
     assert item_id not in store.get_collection(collection)
@@ -35,7 +37,7 @@ def test_store_delete_item(monkeypatch):
     store = MemoryStore('dir')
     collection_id = 'food'
     item_id = 'Steak'
-    params = { 'id': item_id, 'Price': '$10.00'}
+    params = {'id': item_id, 'Price': '$10.00'}
 
     # Newly created item is present in collection
     store.create_item(collection_id, params)

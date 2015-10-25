@@ -1,5 +1,4 @@
 import pytest
-from tornado.testing import AsyncTestCase
 
 def handler_path(base_url):
     return base_url + '/food'

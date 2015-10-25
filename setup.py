@@ -2,6 +2,7 @@ from setuptools import setup, find_packages
 
 # hack to fix a Python 2.7.3 issue with multiprocessing module --
 # see http://bugs.python.org/issue15881
+# pylint:disable=unused-import
 try:
     import multiprocessing
 except ImportError:
