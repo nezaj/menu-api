@@ -1,15 +1,28 @@
+# TODO: Fix this config inheritance, shit doesn't work!
 import os
 
-class Config(object):
+class DevelopmentConfig(object):
+    ENV = 'dev'
+
     # TODO: Add a useful comment
     DEBUG = False
 
-class DevelopmentConfig(Config):
-    ENV = 'dev'
-    DEBUG = True
+    # Useful directories
+    SRC_DIR = os.path.dirname(os.path.abspath(__file__))
+    DATA_DIR = os.path.join(SRC_DIR, 'data')
 
-class TestConfig(Config):
+    # Directory pointing to data source for Memorystore
+    MEMORY_STORE_SOURCE = os.path.join(DATA_DIR, 'memory')
+
+class TestConfig(object):
     ENV = 'test'
+
+    # Useful directories
+    SRC_DIR = os.path.dirname(os.path.abspath(__file__))
+    DATA_DIR = os.path.join(SRC_DIR, 'data')
+
+    # Directory pointing to data source for Memorystore
+    MEMORY_STORE_SOURCE = os.path.join(DATA_DIR, 'memory')
 
 config_dict = {
     'dev': DevelopmentConfig,
