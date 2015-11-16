@@ -1,5 +1,5 @@
 """
-Exports factory fucntion for creating a tornado app
+Exports factory function for creating a tornado app
 """
 from tornado.web import Application as TornadoApp
 

@@ -1,7 +1,7 @@
-from .index_handler import IndexHandler
 from .food_handler import FoodHandler
+from .index_handler import IndexHandler
 
 handlers = [
+    (r"/food", FoodHandler),
     (r"/", IndexHandler),
-    (r"/food", FoodHandler)
 ]

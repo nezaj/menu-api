@@ -1,5 +1,5 @@
 ### Tornado Menu
-This is a toy project to implement an API (and maybe a frontend later?) for ordering food off a menu. Inspired by an interview questions
+This is a toy project to implement an API (and maybe a frontend later?) for ordering food off a menu. Inspired by an interview question
 
 ### Quickstart
 ```
